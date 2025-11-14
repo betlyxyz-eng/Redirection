@@ -1,0 +1,11 @@
+const express = require("express");
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+// Redirection immédiate
+app.get("*", (req, res) => {
+  res.redirect("https://google.com"); 
+});
+
+app.listen(PORT, () => console.log("Redirection active sur le port " + PORT));
